@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" data-provider-thread-count="2" name="Failed suite [testApp]" guice-stage="DEVELOPMENT" verbose="2">
+  <listeners>
+    <listener class-name="com.appium.manager.AppiumParallelTestListener"/>
+    <listener class-name="com.asliri.TestListener"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="sanity-0(failed)" verbose="2">
+    <parameter name="hostName" value="http://192.168.18.13:41966"/>
+    <parameter name="device" value="emulator-5554"/>
+    <classes>
+      <class name="tests.InstagramTestV2">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="likeFeed"/>
+        </methods>
+      </class> <!-- tests.InstagramTestV2 -->
+    </classes>
+  </test> <!-- sanity-0(failed) -->
+  <test thread-count="2" parallel="tests" name="sanity-1(failed)" verbose="2">
+    <parameter name="hostName" value="http://192.168.18.13:41966"/>
+    <parameter name="device" value="emulator-5556"/>
+    <classes>
+      <class name="tests.InstagramTestV2">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="likeFeed"/>
+        </methods>
+      </class> <!-- tests.InstagramTestV2 -->
+    </classes>
+  </test> <!-- sanity-1(failed) -->
+</suite> <!-- Failed suite [testApp] -->

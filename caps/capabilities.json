@@ -1,0 +1,25 @@
+{
+  "android": {
+    "platformName": "android",
+    "automationName": "UiAutomator2",
+    "uiautomator2ServerInstallTimeout": 120000,
+    "adbExecTimeout": 140000,
+    "appPackage": "com.instagram.android",
+    "appActivity": "com.instagram.mainactivity.MainActivity",
+    "app": "./build/instagram.apk",
+    "deviceName": "android",
+    "noReset": true,
+    "fullReset": false,
+    "dontStopAppOnReset": false
+  },
+  "serverConfig" : {
+    "server": {
+      "use-plugins": ["device-farm"],
+      "plugin": {
+        "device-farm": {
+          "platform": "android"
+        }
+      }
+    }
+  }
+}
